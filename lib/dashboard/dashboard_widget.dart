@@ -3,6 +3,7 @@ import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_charts.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../flutter_flow/random_data_util.dart' as random_data;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -215,7 +216,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                   .where('StudentAref',
                                       isEqualTo: widget.idaluno)
                                   .orderBy('Time', descending: true),
-                          limit: 4,
+                          limit: 3,
                         ),
                         builder: (context, snapshot) {
                           // Customize what your widget looks like when it's loading.
@@ -239,11 +240,40 @@ class _DashboardWidgetState extends State<DashboardWidget>
                             child: FlutterFlowLineChart(
                               data: [
                                 FFLineChartData(
-                                  xData: FFAppState().classChar,
-                                  yData: FFAppState().classDoc,
+                                  xData: FFAppState().studentDoc,
+                                  yData: List.generate(
+                                      random_data.randomInteger(14, 14),
+                                      (index) =>
+                                          random_data.randomInteger(1, 5)),
                                   settings: LineChartBarData(
                                     color: Color(0xFF11066C),
                                     barWidth: 2,
+                                  ),
+                                ),
+                                FFLineChartData(
+                                  xData: FFAppState().studentDoc,
+                                  yData: List.generate(
+                                      random_data.randomInteger(14, 14),
+                                      (index) =>
+                                          random_data.randomInteger(1, 5)),
+                                  settings: LineChartBarData(
+                                    color: Color(0xFF9418A8),
+                                    barWidth: 2,
+                                    isCurved: true,
+                                    preventCurveOverShooting: true,
+                                  ),
+                                ),
+                                FFLineChartData(
+                                  xData: FFAppState().studentDoc,
+                                  yData: List.generate(
+                                      random_data.randomInteger(14, 14),
+                                      (index) =>
+                                          random_data.randomInteger(1, 5)),
+                                  settings: LineChartBarData(
+                                    color: Color(0xFFD3710B),
+                                    barWidth: 2,
+                                    isCurved: true,
+                                    preventCurveOverShooting: true,
                                   ),
                                 )
                               ],
@@ -296,7 +326,10 @@ class _DashboardWidgetState extends State<DashboardWidget>
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
                       child: Text(
-                        'tes',
+                        valueOrDefault<String>(
+                          dateTimeFormat('d/M/y', random_data.randomDate()),
+                          '15/06/2022',
+                        ),
                         style: FlutterFlowTheme.of(context).bodyText1,
                       ),
                     ),
@@ -321,7 +354,10 @@ class _DashboardWidgetState extends State<DashboardWidget>
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
                     child: Text(
-                      'tes',
+                      valueOrDefault<String>(
+                        dateTimeFormat('d/M/y', random_data.randomDate()),
+                        '09/05/2022',
+                      ),
                       style: FlutterFlowTheme.of(context).bodyText1,
                     ),
                   ),
@@ -345,7 +381,10 @@ class _DashboardWidgetState extends State<DashboardWidget>
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
                     child: Text(
-                      'tes',
+                      valueOrDefault<String>(
+                        dateTimeFormat('d/M/y', random_data.randomDate()),
+                        '23/04/2022',
+                      ),
                       style: FlutterFlowTheme.of(context).bodyText1,
                     ),
                   ),

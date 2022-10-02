@@ -187,17 +187,40 @@ class _DashboardClassWidgetState extends State<DashboardClassWidget>
                             child: FlutterFlowLineChart(
                               data: [
                                 FFLineChartData(
-                                  xData: List.generate(
-                                      random_data.randomInteger(0, 5),
-                                      (index) =>
-                                          random_data.randomInteger(0, 5)),
+                                  xData: FFAppState().classDoc,
                                   yData: List.generate(
-                                      random_data.randomInteger(0, 5),
+                                      random_data.randomInteger(5, 5),
                                       (index) =>
-                                          random_data.randomInteger(0, 3)),
+                                          random_data.randomInteger(1, 3)),
                                   settings: LineChartBarData(
                                     color: Color(0xFF11066C),
-                                    barWidth: 1,
+                                    barWidth: 2,
+                                    isCurved: true,
+                                    preventCurveOverShooting: true,
+                                  ),
+                                ),
+                                FFLineChartData(
+                                  xData: FFAppState().classDoc,
+                                  yData: List.generate(
+                                      random_data.randomInteger(5, 5),
+                                      (index) =>
+                                          random_data.randomInteger(1, 3)),
+                                  settings: LineChartBarData(
+                                    color: Color(0xFF9418A8),
+                                    barWidth: 2,
+                                    isCurved: true,
+                                    preventCurveOverShooting: true,
+                                  ),
+                                ),
+                                FFLineChartData(
+                                  xData: FFAppState().classDoc,
+                                  yData: List.generate(
+                                      random_data.randomInteger(5, 5),
+                                      (index) =>
+                                          random_data.randomInteger(1, 3)),
+                                  settings: LineChartBarData(
+                                    color: Color(0xFFD3710B),
+                                    barWidth: 2,
                                     isCurved: true,
                                     preventCurveOverShooting: true,
                                   ),
@@ -276,8 +299,7 @@ class _DashboardClassWidgetState extends State<DashboardClassWidget>
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
                         child: Text(
-                          dateTimeFormat(
-                              'd/M/y', containerClassAvaliRecord!.date!),
+                          dateTimeFormat('d/M/y', random_data.randomDate()),
                           style: FlutterFlowTheme.of(context).bodyText1,
                         ),
                       ),
