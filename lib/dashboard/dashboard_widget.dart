@@ -215,7 +215,7 @@ class _DashboardWidgetState extends State<DashboardWidget>
                                   .where('StudentAref',
                                       isEqualTo: widget.idaluno)
                                   .orderBy('Time', descending: true),
-                          limit: 3,
+                          limit: 4,
                         ),
                         builder: (context, snapshot) {
                           // Customize what your widget looks like when it's loading.
