@@ -1,0 +1,116 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "Games",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "Idioma",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "time",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Class",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "User",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "Time_Register",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Class",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "User",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "Time_Register",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "ClassAvali",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "Classref",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "Date",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "ClassAvali",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "Classref",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "Date",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Studente",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "ClassR",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "Timestamp",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Student_WEMWBS",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "StudentAref",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "Time",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Student_Skill",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "StudenteRef",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "Time",
+          "order": "DESCENDING"
+        }
+      ]
+    }
+  ]
+}
